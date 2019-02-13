@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Renato Golia",
+    "classifications": [
+        "Nybus",
+        "Windows Service",
+        "RabbitMQ"
+    ],
+    "name": "Nybus Windows Service with RabbitMQ",
+    "identity": "Nybus.Templates.WindowsService.RabbitMQ.CSharp",
+    "groupIdentity": "Nybus.Templates.WindowsService.RabbitMQ",
+    "shortName": "nybus-rabbitmq-windows-service",
+    "tags":{
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "NetCoreRabbitMqWindowsService",
+    "preferNameDirectory": true,
+    "primaryOutputs": [
+        {
+            "path": "./NetCoreRabbitMqWindowsService.csproj"
+        }
+    ]
+}
