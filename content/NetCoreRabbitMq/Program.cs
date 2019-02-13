@@ -100,6 +100,7 @@ namespace NetCoreRabbitMq
 
             builder.ConfigureLogging((context, logging) =>
             {
+                logging.AddConfiguration(context.Configuration.GetSection("Logging"));
                 logging.AddConsole();
             });
 
