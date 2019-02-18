@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Renato Golia",
+    "classifications": [
+        "Nybus",
+        "AWS Lambda",
+        "RabbitMQ"
+    ],
+    "name": "Nybus AWS Lambda function with RabbitMQ",
+    "identity": "Nybus.Templates.AWSLambda.RabbitMQ.CSharp",
+    "groupIdentity": "Nybus.Templates.AWSLambda.RabbitMQ.CSharp",
+    "shortName": "nybus-rabbitmq-lambda",
+    "tags":{
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "AWSLambdaRabbitMQ",
+    "preferNameDirectory": true,
+    "primaryOutputs": [
+        {
+            "path": "./AWSLambdaRabbitMQ.csproj"
+        }
+    ]
+}
