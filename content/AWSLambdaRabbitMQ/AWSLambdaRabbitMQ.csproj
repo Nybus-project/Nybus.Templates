@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -7,14 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kralizek.Lambda.Template" Version="3.0.0" />
+    <PackageReference Include="Nybus.Extensions.Hosting.Lambda" Version="1.5.0" />
 
-    <PackageReference Include="Nybus" Version="1.4.0" />
-    <PackageReference Include="Nybus.Engine.RabbitMQ" Version="1.4.0" />
+    <PackageReference Include="Nybus" Version="1.5.0" />
+    <PackageReference Include="Nybus.Engine.RabbitMQ" Version="1.5.0" />
 
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

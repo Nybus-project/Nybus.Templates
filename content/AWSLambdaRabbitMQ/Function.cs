@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using Amazon.Lambda.Core;
 using Kralizek.Lambda;
 using Microsoft.Extensions.Configuration;
@@ -10,10 +11,12 @@ using Nybus;
 
 namespace AWSLambdaRabbitMQ
 {
-    public class Function : EventFunction<string>
+    public class Function : NybusFunction<string>
     {
         protected override void Configure(IConfigurationBuilder builder)
         {
+            builder.SetBasePath(Directory.GetCurrentDirectory());
+
             builder.AddJsonFile("appsettings.json", false);
             builder.AddEnvironmentVariables();
         }
