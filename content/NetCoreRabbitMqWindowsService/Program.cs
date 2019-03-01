@@ -110,7 +110,7 @@ namespace NetCoreRabbitMqWindowsService
 
         public override void ConfigureAppConfiguration(IConfigurationBuilder configuration)
         {
-            configuration.SetBasePath(Directory.GetCurrentDirectory());
+            configuration.SetBasePath(AppDomain.CurrentDomain.BaseDirectory);
             
             configuration.AddJsonFile($"appsettings.json", true);
             
