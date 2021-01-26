@@ -1,6 +1,6 @@
 #tool "nuget:?package=NuGet.CommandLine&version=4.9.2"
 #tool "nuget:?package=GitVersion.CommandLine&version=4.0.0"
-#addin "Cake.FileHelpers"
+#addin "nuget:?package=Cake.FileHelpers&version=3.3.0"
 
 #load "./build/types.cake"
 
