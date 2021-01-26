@@ -1,6 +1,6 @@
 max_jobs: 1
 
-image: Visual Studio 2017
+image: Visual Studio 2019
 
 environment:
   MYGET_TOKEN:
@@ -15,7 +15,7 @@ nuget:
   disable_publish_on_pr: true
 
 install:
-  - cmd: dotnet tool install -g Cake.Tool --version 0.30.0
+  - cmd: dotnet tool restore
 
 build_script:
   - cmd: dotnet cake --target=Full
@@ -39,3 +39,12 @@ deploy:
         - master
         - main
       appveyor_repo_tag: true
+  - provider: GitHub
+    on:
+      branch:
+        - master
+        - main
+      appveyor_repo_tag: true
+    auth_token:
+      secure: Qv4tMB9BvNni2+v69vK38jQq2ga1+GiI/YqCWkiA1fZN72v2NtaZo6UpwmXQNkop
+    artifact: /.*.nupkg/
